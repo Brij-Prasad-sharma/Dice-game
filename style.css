@@ -1,0 +1,118 @@
+* { 
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.game-area {
+    display: flex;
+    border: 1px solid grey;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+}
+
+.game-menu {
+    display: flex;
+    flex-basis: 15%;
+    padding: 1%;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.5vw;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-top: none;
+    border-bottom: none;
+}
+
+.game-menu > div {
+    margin: auto;
+    cursor: pointer;
+}
+
+.player-1, .player-2 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 47.5%;
+}
+
+.player-1 > div, .player-2 > div {
+    flex-basis: 50%;
+} 
+
+.player-1-title,.player-2-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 5vw;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    text-transform: uppercase;
+}
+
+.player-1-title > div, .player-2-title > div {
+    display: flex;
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.dice > img {
+    width: 90px;
+    height: 90px;
+    border: 1px solid cadetblue;
+}
+
+.player-1-current-score, .player-2-current-score {
+    display: flex;
+}
+
+.player-1-current-score > div, .player-2-current-score > div  {
+    margin: auto;
+    border: 1px solid grey;
+    padding: 2%;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.active {
+    border-top: 1px solid royalblue;
+}
+
+
+
+
+@media (max-width: 768px) { 
+
+    .player-1-title,.player-2-title {
+        font-size: 8vw;
+    }
+
+    .player-1-current-score > div, .player-2-current-score > div  {
+        font-size: 5vw;
+    }
+
+    .game-menu {
+        flex-direction: row;
+        font-size: 4vw;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+    }
+    
+    .game-area {
+        flex-direction: column;
+    }
+
+    .dice > img {
+        width: 50px;
+        height: 50px;
+    }
+
+}
